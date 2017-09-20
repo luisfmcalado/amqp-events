@@ -1,0 +1,7 @@
+{
+  "system": "app",
+  "resource": "user",
+  "event": {
+    "user": "luisfmcalado"
+  }
+}

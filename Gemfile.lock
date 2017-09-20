@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    amq-protocol (2.2.0)
+    bunny (2.7.0)
+      amq-protocol (>= 2.2.0)
+    multi_json (1.12.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bunny (>= 2.6.4)
+  multi_json
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.16.0.pre.2
