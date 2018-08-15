@@ -1,6 +1,6 @@
 {
-  "system": "app",
-  "resource": "user",
+  "system": "operations",
+  "resource": "user.created",
   "event": {
     "user": "luisfmcalado"
   }

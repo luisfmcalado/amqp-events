@@ -1,6 +1,6 @@
 {
   "system": "operations",
-  "resource": "user.deleted",
+  "resource": "user.updated",
   "event": {
     "user": "luisfmcalado"
   }

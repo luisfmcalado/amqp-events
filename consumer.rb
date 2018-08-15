@@ -8,7 +8,7 @@ args = build_args
 errors = validate_args(args)
 Error.exit_with_errors(errors) unless errors.empty?
 
-session = Bunny.new
+session = Bunny.new("amqp://guest:guest@localhost:5672")
 connection = session.start
 
 queue = create_queue(connection, args[:topic], args[:queue], args[:routing_key])
@@ -22,8 +22,8 @@ BEGIN {
 
 def create_queue(connection, topic, queue, routing_key)
   channel = connection.create_channel
-  exchange = channel.topic(topic)
-  channel.queue(queue).bind(exchange, routing_key: routing_key)
+  exchange = channel.topic(topic, durable: true)
+  channel.queue(queue, durable: true).bind(exchange, routing_key: routing_key)
 end
 
 def validate_args(args)
